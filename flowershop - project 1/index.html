@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flower.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <p class="logo-text"><a href="#">flower<span id="dot">.</span>io</a></p>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#"><span id="prototype-page-selected">Shop</span></a>
+            </li>
+        </ul>
+    </nav>
+    <section class="banner">
+        <h1>SHOP</h1>
+    </section>
+    <section class="section-type-1">
+        <h1>STEP 1 &bull; Make A Bouquet.</h1>
+        <div class="elements">
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg" alt="">
+                <div class="buy-info">
+                    <p>Roses</p>
+                    &bull;
+                    <input type="number" class="buy-info-input-num" id="roses-amount" 
+                    placeholder="150RSD Per Flower">
+                </div>
+            </div>
+            <div class="div-elements">
+                <img src="https://s3g2u3k4.rocketcdn.me/wp-content/uploads/sites/4/2022/04/lily.jpg" alt="">
+                <div class="buy-info">
+                    <p>Lilies</p>
+                    &bull;
+                    <input type="number" class="buy-info-input-num" id="lilies-amount" placeholder="120RSD Per Flower">
+                </div>
+            </div>
+            <div class="div-elements">
+                <img src="https://cdn.mos.cms.futurecdn.net/JpM9niB9yuqs6AU6V8gqW6.jpg" alt="">
+                <div class="buy-info">
+                    <p>Gerbera</p>
+                    &bull;
+                    <input type="number" class="buy-info-input-num" id="gerbera-amount"
+                    placeholder="70RSD Per Flower">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-type-1">
+        <h1>STEP 2 &bull; Select A Gift. (OPTIONAL)</h1>
+        <div class="elements">
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="buy-info">
+                    <p>Chocolate</p>
+                    YES/NO
+                    <input type="checkbox" class="buy-info-input-checkbox" id="chocolate-amount" checked>
+                </div>
+            </div>
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/2995333/pexels-photo-2995333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="buy-info">
+                    <p>Champagne</p>
+                    YES/NO
+                    <input type="checkbox" class="buy-info-input-checkbox" id="champagne-amount">
+                </div>
+            </div>
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/9159719/pexels-photo-9159719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="buy-info">
+                    <p>Box Of Candies</p>
+                    YES/NO
+                    <input type="checkbox" class="buy-info-input-checkbox" id="box-of-candies-amount">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-type-1">
+        <h1>STEP 3 &bull; Pay With Cash Or Card.</h1>
+        <div class="elements">
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/248933/pexels-photo-248933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="buy-info">
+                    <p>Cash</p>
+                    <input type="radio" class="buy-info-input-radio" id="cash" name="payment" checked>
+                </div>
+            </div>
+            <div class="div-elements">
+                <img src="https://images.pexels.com/photos/210742/pexels-photo-210742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="buy-info">
+                    <p>Card</p>
+                    <input type="radio" class="buy-info-input-radio" id="card" name="payment">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-type-1">
+        <div class="buttons">
+            <button id="calculate" value="calculate">Calculate</button>
+            <button id="reset" value="reset">Reset</button>
+        </div>
+    </section>
+    <section class="section-type-1">
+        <h1>STEP 4  &bull; Surprise Your Loved One!</h1>
+        <div class="elements-2">
+            <h3>Your Order:</h3>
+            <div class="flower-amount">
+                <div id="roses-amount-print"></div>
+                <div id="lilies-amount-print"></div>
+                <div id="gerbera-amount-print"></div>
+            </div>
+            <div class="gifts-amount">
+                <div id="chocolate-amount-print"></div>
+                <div id="chocolate-box-amount-print"></div>
+                <div id="champangne-amount-print"></div>
+            </div>
+            <div class="total">
+                <div id="without-discount"></div>
+                <div id="with-discount"></div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>    
+
+</body>
+</html>

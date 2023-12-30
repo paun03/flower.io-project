@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+nav  {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul li a, nav a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#prototype-page-selected, #dot {
+    color: #9E00FF;
+}
+
+#prototype-page-selected {
+    font-weight: bold;
+}
+
+.banner {
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.100hdwallpapers.com/wallpapers/6000x3375/violet_lilac_flowers_4k-other.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 72px;
+}
+  
+.section-type-1 {
+    width: 80%;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.section-type-1 h1 {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.div-elements {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Example box-shadow values */
+  }
+
+.elements {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 220px;
+    margin-top: 24px;
+}
+
+.elements .div-elements img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;  
+}
+
+.buy-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+.buy-info p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.buy-info-input-num {
+    width: 60%;
+}
+
+.buy-info-input-checkbox {
+    transform: scale(1.5);
+}
+
+.buy-info-input-radio {
+    transform: scale(1.5);
+}
+
+#calculate, #reset {
+    width: 240px;
+    padding: 12px;
+}
+
+#calculate {
+    color: #9E00FF;
+    background-color: white;
+    border: #9E00FF 1px solid;
+}
+
+#reset {
+    color: white;
+    background-color: #9E00FF;
+    border: #9E00FF 1px solid;
+}
+
+#calculate:hover, #reset:hover {
+    font-size: 24px;
+}
+
+.elements-2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-type-1 h3 {
+    font-size: 32px;
+}
+
+.flower-amount {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
