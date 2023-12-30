@@ -124,12 +124,12 @@ let calculateToTotal = () => {
 };
 
 let totalSumCalculation = () => {
-    if (payWithCard.checked) {
+    if (payWithCard.checked && totalSum > 2000) {
         totalSumPar.innerText = totalSum;
         totalSumPar.style.color = "#9E00FF";
         totalSumPar.style.fontSize = "16px"; 
         withoutDiscount.appendChild(totalSumPar);
-        let discountSum = totalSum * 8/10; 
+        let discountSum = totalSum * 9/10; 
         discountSumPar.innerText = discountSum;
         discountSumPar.style.color = "#9E00FF";
         discountSumPar.style.fontSize = "32px";  
