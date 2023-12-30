@@ -161,3 +161,7 @@ ul {
     justify-content: center;
     flex-direction: column;
 }
+
+#calculate-total-comp {
+    margin-top: 16px;
+}

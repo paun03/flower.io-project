@@ -8,28 +8,40 @@ let gerberaAmount = document.querySelector("#gerbera-amount")
 
 let chocolateAmount = document.querySelector("#chocolate-amount");
 let champagneAmount = document.querySelector("#champagne-amount");
-let boxOfCandiesAmount = document.querySelector("#box-of-candies-amount");
+let boxOfChocolatesAmount = document.querySelector("#box-of-candies-amount");
+
+let payWithCash = document.querySelector("#cash");
+let payWithCard = document.querySelector("#card");
+
+console.log(payWithCash);
+console.log(payWithCard);
 
 // BUTTONS
 
 let btnCalculate = document.querySelector("#calculate");
 let btnReset = document.querySelector("#reset");
 
-// DIVS
+// DIVS + PARAGRAPHS
 
 let divRoses = document.querySelector("#roses-amount-print");
-console.log(divRoses);
 let divLilies = document.querySelector("#lilies-amount-print");
-console.log(divLilies);
 let divGerbera = document.querySelector("#gerbera-amount-print");
-console.log(divGerbera);
 
 let divChocolates = document.querySelector("#chocolate-amount-print");
 let divChampagne = document.querySelector("#champagne-amount-print");
-let divboxOfChocolates = document.querySelector("#box-of-chocolates-amount-print");
+let divBoxOfChocolates = document.querySelector("#chocolate-box-amount-print");
 
 let withoutDiscount = document.querySelector("#without-discount");
 let withDiscount = document.querySelector("#with-discount");
+
+let chocolatePar = document.createElement("p");
+let champagnePar = document.createElement("p");
+let boxOfChocolatesPar = document.createElement("p");
+
+let calculateToTotalComp = document.querySelector("#calculate-total-comp");
+
+let totalSumPar = document.createElement("p");
+let discountSumPar = document.createElement("p");
 
 // COUNTERS
 
@@ -37,7 +49,12 @@ let rosesCounter = 0;
 let liliesCounter = 0;
 let gerberaCounter = 0;
 
-btnCalculate.addEventListener("click", () => {
+let totalSum = 0;
+
+
+// FUNCTIONS
+
+let addFlowers = () => {
     for (let i = 0; i < rosesAmount.value; i++) {
         if (rosesCounter < rosesAmount.value) {
         let rosesImage = document.createElement('img');
@@ -65,4 +82,76 @@ btnCalculate.addEventListener("click", () => {
         gerberaCounter++;
         }
     }
+    totalSum += rosesCounter * 150 + liliesCounter * 120 + gerberaCounter * 70;
+};
+
+let addGifts = () => {
+    if (chocolateAmount.checked && ((rosesAmount.value > 0) || (liliesAmount.value > 0) || (gerberaAmount.value > 0))) {
+    chocolatePar.innerText = "+ Chocolate";
+    chocolatePar.style.color = "#9E00FF";
+    chocolatePar.style.fontSize = "24px";
+    divChocolates.appendChild(chocolatePar);
+    totalSum += 500;
+    } else {
+        chocolatePar.innerText = "";
+        totalSum += 0;
+    }
+
+    if (champagneAmount.checked && ((rosesAmount.value > 0) || (liliesAmount.value > 0) || (gerberaAmount.value > 0))) {
+        champagnePar.innerText = "+ Champagne";
+        champagnePar.style.color = "#9E00FF";
+        champagnePar.style.fontSize = "24px";
+        divChampagne.appendChild(champagnePar);
+        totalSum += 500;
+    } else {
+        champagnePar.innerText = "";
+    }
+    if (boxOfChocolatesAmount.checked && ((rosesAmount.value > 0) || (liliesAmount.value > 0) || (gerberaAmount.value > 0))) {
+        boxOfChocolatesPar.innerText = "+ Box Of Chocolates";
+        boxOfChocolatesPar.style.color = "#9E00FF";
+        boxOfChocolatesPar.style.fontSize = "24px";
+        divBoxOfChocolates.appendChild(boxOfChocolatesPar);
+        totalSum += 500; 
+    } else {
+        boxOfChocolatesPar.innerText = "";
+    }
+};
+
+let calculateToTotal = () => {
+    if ((rosesAmount.value > 0) || (liliesAmount.value > 0) || (gerberaAmount.value > 0)) {
+        calculateToTotalComp.textContent = "Total Sum: ";
+    }
+};
+
+let totalSumCalculation = () => {
+    if (payWithCard.checked) {
+        totalSumPar.innerText = totalSum;
+        totalSumPar.style.color = "#9E00FF";
+        totalSumPar.style.fontSize = "16px"; 
+        withoutDiscount.appendChild(totalSumPar);
+        let discountSum = totalSum * 8/10; 
+        discountSumPar.innerText = discountSum;
+        discountSumPar.style.color = "#9E00FF";
+        discountSumPar.style.fontSize = "32px";  
+        withDiscount.appendChild(discountSumPar);
+        totalSum = 0;
+        discountSum = 0;
+    } else {
+        discountSumPar.innerText = totalSum;
+        discountSumPar.style.color = "#9E00FF";
+        discountSumPar.style.fontSize = "32px";  
+        withDiscount.appendChild(discountSumPar);
+        totalSum = 0;
+    }
+};
+
+btnCalculate.addEventListener("click", () => {
+    calculateToTotal();
+    addFlowers();
+    addGifts();
+    totalSumCalculation();
+});
+
+btnReset.addEventListener("click", () => {
+    location.reload(true);
 });
