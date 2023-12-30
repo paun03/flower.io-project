@@ -182,7 +182,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 600px;
+    min-height: 400px;
+    max-height: auto;
 }
 
 footer {
