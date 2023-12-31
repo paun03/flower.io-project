@@ -154,7 +154,7 @@ ul {
 }
 
 #calculate:hover, #reset:hover {
-    font-size: 24px;
+    transform: scale(0.9);
 }
 
 .elements-2 {
