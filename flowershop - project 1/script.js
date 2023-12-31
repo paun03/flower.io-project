@@ -125,19 +125,19 @@ let calculateToTotal = () => {
 
 let totalSumCalculation = () => {
     if (payWithCard.checked && totalSum > 2000) {
-        totalSumPar.innerText = totalSum;
+        totalSumPar.innerText = `Your Total Without Discount is: ${totalSum}RSD`;
         totalSumPar.style.color = "#9E00FF";
         totalSumPar.style.fontSize = "16px"; 
         withoutDiscount.appendChild(totalSumPar);
         let discountSum = totalSum * 9/10; 
-        discountSumPar.innerText = discountSum;
+        discountSumPar.innerText = `Your Total WITH DISCOUNT is: ${discountSum}RSD`;
         discountSumPar.style.color = "#9E00FF";
         discountSumPar.style.fontSize = "32px";  
         withDiscount.appendChild(discountSumPar);
         totalSum = 0;
         discountSum = 0;
     } else {
-        discountSumPar.innerText = totalSum;
+        discountSumPar.innerText = `Your Total is: ${totalSum}RSD`;
         discountSumPar.style.color = "#9E00FF";
         discountSumPar.style.fontSize = "32px";  
         withDiscount.appendChild(discountSumPar);
