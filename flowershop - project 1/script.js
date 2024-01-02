@@ -13,9 +13,6 @@ let boxOfChocolatesAmount = document.querySelector("#box-of-candies-amount");
 let payWithCash = document.querySelector("#cash");
 let payWithCard = document.querySelector("#card");
 
-console.log(payWithCash);
-console.log(payWithCard);
-
 // BUTTONS
 
 let btnCalculate = document.querySelector("#calculate");
