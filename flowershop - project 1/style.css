@@ -139,6 +139,7 @@ ul {
 #calculate, #reset {
     width: 240px;
     padding: 12px;
+    transition: transform 0.3s ease-in-out;
 }
 
 #calculate {
