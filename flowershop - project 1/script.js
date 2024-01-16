@@ -93,7 +93,6 @@ let addGifts = () => {
         chocolatePar.innerText = "";
         totalSum += 0;
     }
-
     if (champagneAmount.checked && ((rosesAmount.value > 0) || (liliesAmount.value > 0) || (gerberaAmount.value > 0))) {
         champagnePar.innerText = "+ Champagne";
         champagnePar.style.color = "#9E00FF";
